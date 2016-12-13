@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://Impl.WebServ/" xmlns:tns="http://Impl.WebServ/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="deleteContragent" type="tns:deleteContragent"/>
+
+  <xs:element name="deleteContragentResponse" type="tns:deleteContragentResponse"/>
+
+  <xs:element name="deleteOSP" type="tns:deleteOSP"/>
+
+  <xs:element name="deleteOSPResponse" type="tns:deleteOSPResponse"/>
+
+  <xs:element name="getAllContragent" type="tns:getAllContragent"/>
+
+  <xs:element name="getAllContragentResponse" type="tns:getAllContragentResponse"/>
+
+  <xs:element name="getAllOsp" type="tns:getAllOsp"/>
+
+  <xs:element name="getAllOspResponse" type="tns:getAllOspResponse"/>
+
+  <xs:element name="getContragentFromID" type="tns:getContragentFromID"/>
+
+  <xs:element name="getContragentFromIDResponse" type="tns:getContragentFromIDResponse"/>
+
+  <xs:element name="getListNameOsp" type="tns:getListNameOsp"/>
+
+  <xs:element name="getListNameOspResponse" type="tns:getListNameOspResponse"/>
+
+  <xs:element name="getOSPFromID" type="tns:getOSPFromID"/>
+
+  <xs:element name="getOSPFromIDResponse" type="tns:getOSPFromIDResponse"/>
+
+  <xs:element name="getgetListNameContragetnFromOSP" type="tns:getgetListNameContragetnFromOSP"/>
+
+  <xs:element name="getgetListNameContragetnFromOSPResponse" type="tns:getgetListNameContragetnFromOSPResponse"/>
+
+  <xs:element name="insertContragent" type="tns:insertContragent"/>
+
+  <xs:element name="insertContragentResponse" type="tns:insertContragentResponse"/>
+
+  <xs:element name="insertOSP" type="tns:insertOSP"/>
+
+  <xs:element name="insertOSPResponse" type="tns:insertOSPResponse"/>
+
+  <xs:element name="updateContragent" type="tns:updateContragent"/>
+
+  <xs:element name="updateContragentResponse" type="tns:updateContragentResponse"/>
+
+  <xs:element name="updateOSP" type="tns:updateOSP"/>
+
+  <xs:element name="updateOSPResponse" type="tns:updateOSPResponse"/>
+
+  <xs:element name="updateOrInsertContragent" type="tns:updateOrInsertContragent"/>
+
+  <xs:element name="updateOrInsertContragentResponse" type="tns:updateOrInsertContragentResponse"/>
+
+  <xs:element name="updateOrInsertOSP" type="tns:updateOrInsertOSP"/>
+
+  <xs:element name="updateOrInsertOSPResponse" type="tns:updateOrInsertOSPResponse"/>
+
+  <xs:complexType name="updateOrInsertOSP">
+    <xs:sequence>
+      <xs:element name="arg0" type="tns:osp" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="osp">
+    <xs:sequence>
+      <xs:element name="aliasesOsp" type="xs:string" minOccurs="0"/>
+      <xs:element name="dateCreateOsp" type="xs:dateTime" minOccurs="0"/>
+      <xs:element name="dateOfChange" type="xs:dateTime" minOccurs="0"/>
+      <xs:element name="id" type="xs:short"/>
+      <xs:element name="ipOsp" type="xs:string" minOccurs="0"/>
+      <xs:element name="loginOsp" type="xs:string" minOccurs="0"/>
+      <xs:element name="nameOsp" type="xs:string" minOccurs="0"/>
+      <xs:element name="passwordOsp" type="xs:string" minOccurs="0"/>
+      <xs:element name="vkspOsp" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="updateOrInsertOSPResponse">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="updateOSP">
+    <xs:sequence>
+      <xs:element name="arg0" type="tns:osp" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="updateOSPResponse">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="getgetListNameContragetnFromOSP">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getgetListNameContragetnFromOSPResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="updateContragent">
+    <xs:sequence>
+      <xs:element name="arg0" type="tns:contragent" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="contragent">
+    <xs:sequence>
+      <xs:element name="agentAgreementCodeContragent" type="xs:string" minOccurs="0"/>
+      <xs:element name="agentCodeContragent" type="xs:string" minOccurs="0"/>
+      <xs:element name="agentDeptCodeContragent" type="xs:string" minOccurs="0"/>
+      <xs:element name="dateCreateContragent" type="xs:dateTime" minOccurs="0"/>
+      <xs:element name="dateOfChange" type="xs:dateTime" minOccurs="0"/>
+      <xs:element name="id" type="xs:short"/>
+      <xs:element name="idOsp" type="xs:short"/>
+      <xs:element name="nameContragent" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="updateContragentResponse">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="getListNameOsp">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="getListNameOspResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="deleteOSP">
+    <xs:sequence>
+      <xs:element name="arg0" type="tns:osp" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="deleteOSPResponse">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="insertOSP">
+    <xs:sequence>
+      <xs:element name="arg0" type="tns:osp" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="insertOSPResponse">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="getContragentFromID">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:long" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getContragentFromIDResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:contragent" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="updateOrInsertContragent">
+    <xs:sequence>
+      <xs:element name="arg0" type="tns:contragent" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="updateOrInsertContragentResponse">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="deleteContragent">
+    <xs:sequence>
+      <xs:element name="arg0" type="tns:contragent" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="deleteContragentResponse">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="getOSPFromID">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:long" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getOSPFromIDResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:osp" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getAllOsp">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="getAllOspResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:osp" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getAllContragent">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="getAllContragentResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:contragent" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="insertContragent">
+    <xs:sequence>
+      <xs:element name="arg0" type="tns:contragent" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="insertContragentResponse">
+    <xs:sequence/>
+  </xs:complexType>
+</xs:schema>
+

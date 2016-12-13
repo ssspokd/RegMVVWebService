@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+<hibernate-reverse-engineering>
+  <schema-selection/>
+  <table-filter match-name="CONTRAGENT_ACTION"/>
+  <table-filter match-name="CONTRAGENT"/>
+  <table-filter match-name="SYS_LABEL_LEVEL"/>
+  <table-filter match-name="SYS_USERS"/>
+  <table-filter match-name="OSP"/>
+  <table-filter match-name="OSP_CONTRAGENT"/>
+</hibernate-reverse-engineering>
